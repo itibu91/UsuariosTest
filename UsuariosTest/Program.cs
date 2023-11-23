@@ -21,6 +21,7 @@ builder.Services.AddCors(options =>
 builder.Configuration.AddJsonFile("appsettings.json");
 var secretkey = builder.Configuration.GetSection("Settings").GetSection("secretkey").ToString();
 
+
 var keyBytes = Encoding.UTF8.GetBytes(secretkey);
 
 builder.Services.AddAuthentication(config =>
